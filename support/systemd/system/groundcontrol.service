@@ -1,0 +1,10 @@
+[Unit]
+Description=Ground Control Daemon
+
+[Service]
+ExecStart=/bin/bash -c 'cd /opt/groundcontrol/ && ./groundcontrol'
+PIDFile=/var/run/groundcontrol.pid
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
